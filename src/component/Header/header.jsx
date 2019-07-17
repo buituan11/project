@@ -30,7 +30,7 @@ class Header extends Component {
            <header className="container-fluid">
            		<div className="row">
            			<div className="icon col-md-3">
-           				<NavLink to="/"> <img src="https://res.cloudinary.com/buituan/image/upload/v1562254248/Project1/icon.png" alt="icon"/></NavLink>
+           				<NavLink to={process.env.PUBLIC_UR+"/"}> <img src="https://res.cloudinary.com/buituan/image/upload/v1562254248/Project1/icon.png" alt="icon"/></NavLink>
            			</div>
            			<div className="navBar col-md-9">
            				<div className="contact container-fluid">
