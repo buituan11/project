@@ -17,7 +17,7 @@ class Main extends Component {
             <div className="main container-fluid">
             	<div className="visual container-fluid">
                     <div className="visual-title container-fluid">
-                            <p>Hãy trải nghiệm tất cả tính năng của ECOUNT ERP</p>
+                            <p>Hãy AAA trải nghiệm tất cả tính năng của ECOUNT ERP</p>
                             <p>để Thay Đổi Hiệu Quả</p>
                             <p>chỉ 1.000.000 đồng mỗi tháng</p>
                     </div>
