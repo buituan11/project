@@ -253,7 +253,7 @@ class App extends Component {
               sanPham={this.state.arrSP}
               gioiThieu={this.state.arrGT}/>
             <Switch>
-              <Route exact path={process.env.PUBLIC_URL+'/'} component={ () => this.RenderMain() }/>
+              <Route path={process.env.PUBLIC_URL+'/'} component={ () => this.RenderMain() }/>
               {this.state.arrTN.routes.map((item, index)=>
                   <Route key={index} path={ `${item.path}/:id` } component={ ({match})=>this.RenderContent( this.state.arrTN, {match})}/>
               )}
