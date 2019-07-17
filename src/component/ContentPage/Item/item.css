@@ -1,0 +1,37 @@
+.content{
+	text-align: justify;
+	margin-bottom: 5%;
+}
+.content h1{
+	font-size: 30px;
+	border-bottom: 1px solid #E2E2E2;
+	margin-bottom: 2%;
+}
+.content h2{
+	color: var(--redColor);
+}
+.item {
+	margin-bottom: 5%;
+}
+.item h2{
+	font-size: 25px;
+	color: var(--redColor);
+}
+.item img{
+	width: 100%;
+	height: 70%;
+}
+.content-list{
+	border: 3px solid #B2B2B2;
+}
+.content-list ul{
+	padding: 0% 5% 0% 5%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.content-list ul li a{
+	color: #555555;
+}
+.content-list ul li a:hover{
+	color: black;
+}

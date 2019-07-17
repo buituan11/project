@@ -1,0 +1,118 @@
+header{
+	position: fixed !important;
+	background-color: white;
+	z-index: 999;
+}
+.row{
+	height: 100%;
+}
+.icon{
+	/*background-image: url("https://res.cloudinary.com/buituan/image/upload/v1562254248/Project1/icon.png");
+	background-repeat: no-repeat;
+	background-position: center center;*/
+	padding: 2%;
+}
+.contact{
+	/*height: 50%;*/
+	padding: 1% 0% 1% 0%;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: baseline;
+}
+.contact a{
+	text-decoration: none;
+	color: var(--redColor);
+	font-size: 18px;
+	font-weight: bold;
+	font-family: var(--fontFamily);
+	width: 20%;
+}
+.contact i{
+	margin: 0% 1% 0% 1%;
+}
+.btn-contact{
+	display: grid;
+	grid-template-columns: repeat(3, minmax(190px,1fr));
+	grid-column-gap: 0.2%;
+}
+.btn-contact button{
+	border: none;
+	color: white;
+	background-color: var(--redColor);
+	font-size: 14px;
+	padding: 2% 0% 2% 0%;
+}
+.menu{
+	clear: right;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 1%;
+	padding: 0% 2% 0% 2%;
+	position: relative;
+}
+.menu1 a{
+	text-decoration: none;
+	color: #333333;
+	font-weight: bold;
+	font-size: 20px;
+}
+.menu1>a{
+	padding: 20px 20px 40px 20px;	
+}
+.menu1 a:hover{
+	color: var(--redColor);
+}
+.menu1:hover .menu2{
+	display: block;
+}
+.menu2{
+	display: none;
+	width: 95%;
+	height: 300px;
+	position: absolute;
+	bottom: -315px;
+	left: 0px;
+	background-color: white;
+	border-top: 0.5px solid black;
+}
+.menu2-title{
+	height: 100%;
+	padding-top: 2%;
+	background-color: #F3F3F3;
+	position: relative;
+}
+.menu2-title h1{
+	font-size: 16px;
+	font-weight: bold;
+	float: right
+}
+.menu2-title button{
+	position: absolute;
+	width: 90%;
+	left: 6%;
+	border:none;
+	padding: 2%;
+}
+.menu2-title button:hover{
+	color: white;
+	background-color: var(--redColor);
+}
+.menu2-detail{
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(6, minmax(60px,1fr)); ;
+	text-align: left;
+	/*padding-top: 20px;*/
+}
+.menu2-detail a{
+	margin-top: 20px;
+	margin-bottom: 0px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: white;
+}
+.menu2-detail a:hover{
+	color: var(--redColor);
+}

@@ -1,0 +1,217 @@
+.main{
+	padding: 0px;
+}
+/*VISUAL*/
+.visual{
+	background: url(https://res.cloudinary.com/buituan/image/upload/v1562319274/Project1/bg.jpg) center center fixed;
+	background-size: cover;
+	background-color: red;
+	z-index: -1;
+	padding: 0px;
+}
+.visual-title{
+	background-color: #00000070;
+	text-align: center;
+	padding-top: 10%;
+}
+.visual-title p{
+	margin-bottom: 0px;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+}
+.visual-detail{
+	padding:0% 25% 10% 25%;
+	list-style-type: none;
+	/*height: 50%;*/
+	background-color: #00000070;
+	color: white;
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+	grid-gap: 10px;
+}
+.visual-detail li{
+	background-color: #0000009e;
+}
+.visual-detail li a{
+	text-decoration: none;
+	color: white;
+	width: 100%;
+}
+.visual-detail li a img{
+	margin-top: 20%;
+	margin-bottom: 10%;
+}
+.visual-detail li:hover{
+	background-color: var(--redColor);
+}
+/*VISUAL*/
+/*COMMENT*/
+.comment{
+	display: flex;
+	flex-direction: column;
+}
+.comment{
+	padding: 0px 0px 0px 0px;
+}
+.prev, .next{
+	background-color: white;
+	border:0px;
+	color: #666666;
+	font-size: 60px;
+}
+.prev:hover{
+	color: black;
+}
+.next:hover{
+	color: black;
+}
+.detail-comment{
+	text-align: justify;
+}
+.more-comment{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: baseline;
+	background-color: #F3F3F3;
+}
+.more-comment p{
+	margin: 20px 20px 20px 0px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.more-comment button {
+	padding: 10px 20px 10px 20px;
+	border: 2px solid #00487A;
+	color: #00487A;
+	background-color: white;
+}
+.more-comment a{
+	text-decoration: none;
+	color: #00487A;
+}
+.more-comment button:hover{
+	background-color:  #00487A;
+}
+.more-comment button:hover a{
+	color: white;
+}
+/*COMMENT*/
+/*STATISTIC*/
+.statistic{
+	background: url('https://res.cloudinary.com/buituan/image/upload/v1562404233/Project1/contents-bg.jpg') no-repeat 0 0;
+	background-size: cover;
+	color: white;
+}
+.statistic p{
+	margin: 0px;
+}
+.statistic>p.statistic-title{
+	padding-top: 90px;
+	margin: 0px;
+	background-color: #000000a6;
+	font-size: 40px;
+	font-weight: bold;
+}
+.statistic ul{
+	margin: 0px;	
+	list-style-type: none;
+	background-color: #000000a6;
+	padding: 90px 10% 5% 10%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-gap: 20px;
+}
+.statistic h1{
+	font-size: 30px;
+	font-weight: bold;
+}
+.statistic p{
+	font-size: 25px;
+}
+.more-statistic{
+	padding: 80px 10% 30px 10%;
+	background-color: #000000db;
+
+}
+.more-statistic p{
+	font-size: 40px;
+	font-weight: bold;
+}
+.more-statistic button{
+	background-color: transparent;
+	border: 2px solid white;
+	margin-top: 50px;
+	padding: 10px 5% 10px 5%;
+	font-size: 25px;
+}
+.more-statistic a{
+	text-decoration: none;
+	color: white;
+}
+.more-statistic button:hover{
+	background-color: white;
+	border: 2px solid white;
+}
+.more-statistic button:hover a{
+	color: black;
+}
+/*STATISTIC*/
+/*MERIT*/
+.merit{
+	padding: 5% 0% 5% 0%;
+	background-color: #00487A;
+	color: white;
+}
+.merit p{
+	font-size: 40px;
+	font-weight: bold;
+}
+.merit ul{
+	list-style-type: none;
+	padding: 5% 10% 0% 10%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+	grid-gap: 20px;
+	word-wrap: break-word;
+}
+.merit ul li{
+	height: 140px;
+}
+.img-merit{
+	background-color: white;
+	border-radius: 50%;
+}
+.img-merit img{
+	margin-top: 15%;
+	width: 80%;
+	height: 70%;
+}
+.merit ul li a{
+	display: inline-grid;
+	font-size: 20px;
+	text-decoration: none;
+	color: white;
+	text-align: left;
+}
+.trial{
+	padding: 3%;
+}
+.trial p{
+	font-size: 40px;
+}
+.trial button{
+	background-color: red;
+	color: white;
+	padding: 10px 5% 10px 5%;
+	font-size: 20px;
+}
+.trial a{
+	text-decoration: none;
+	color: white;
+}
+.trial button:hover{
+	background-color: #BF0D0D;
+}
+/*MERIT*/

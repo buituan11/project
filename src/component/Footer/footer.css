@@ -1,0 +1,23 @@
+.footer{
+	text-align: left;
+	background-color: #33373E;
+	padding: 5%;
+}
+.footer i{
+	color: #666666;
+}
+.footer a{
+	text-decoration: none;
+	color: white;
+}
+.menu-footer{
+	color: white;
+}
+.menu-footer ul{
+	display: grid;
+	grid-template-columns: repeat(2, minmax(200px, 1fr));
+	padding-left: 10%;
+}
+.iso{
+	color: white;
+}
