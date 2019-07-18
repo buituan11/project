@@ -46,9 +46,9 @@ ul{
 .visual-detail li:hover{
 	background-color: var(--redColor);
 }
-.hiden{
+.hiden{			 		/*CHƯA XONG THÊM HIỆU ỨNG*/
 	background-color: #00000070;
-	padding-bottom: 5%
+	padding-bottom: 5%;
 }
 @media screen and (max-width: 480px) {
 	.visual-title p{
@@ -95,12 +95,17 @@ ul{
 .detail-comment{
 	text-align: justify;
 }
-.more-comment{
+.more-comment .row{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: baseline;
 	background-color: #F3F3F3;
+}
+@media screen and (max-width: 480px) {
+	.more-comment .row{
+		padding: 2%;
+	}
 }
 .more-comment p{
 	margin: 20px 20px 20px 0px;
@@ -123,21 +128,20 @@ ul{
 .more-comment button:hover a{
 	color: white;
 }
+
 /*COMMENT*/
 /*STATISTIC*/
 .statistic{
 	background: url('https://res.cloudinary.com/buituan/image/upload/v1562404233/Project1/contents-bg.jpg') no-repeat 0 0;
 	background-size: cover;
 	color: white;
+	padding: 0;
 }
-.statistic p{
-	margin: 0px;
-}
-.statistic>p.statistic-title{
+.statistic>p{
 	padding-top: 90px;
 	margin: 0px;
 	background-color: #000000a6;
-	font-size: 40px;
+	font-size: 2.75em;
 	font-weight: bold;
 }
 .statistic ul{
@@ -146,23 +150,39 @@ ul{
 	background-color: #000000a6;
 	padding: 90px 10% 5% 10%;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
 	grid-gap: 20px;
 }
-.statistic h1{
-	font-size: 30px;
+.statistic ul li h1{
+	font-size: 3em;
 	font-weight: bold;
 }
-.statistic p{
-	font-size: 25px;
+.statistic ul li p{
+	font-size: 1.5em;
+}
+@media screen and (max-width: 480px){
+	.statistic>p{
+		padding-top: 50px;
+		font-size: 1em;
+	}
+	.statistic ul {
+		padding: 50px 1% 5% 1%;
+		grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+		grid-gap: 0.5em;
+	}	
+	.statistic ul li h1{
+		font-size: 2em;
+	}
+	.statistic ul li p{
+		font-size: 1em;
+	}
 }
 .more-statistic{
 	padding: 80px 10% 30px 10%;
 	background-color: #000000db;
-
 }
 .more-statistic p{
-	font-size: 40px;
+	font-size: 3em;
 	font-weight: bold;
 }
 .more-statistic button{
@@ -170,7 +190,7 @@ ul{
 	border: 2px solid white;
 	margin-top: 50px;
 	padding: 10px 5% 10px 5%;
-	font-size: 25px;
+	font-size: 2em;
 }
 .more-statistic a{
 	text-decoration: none;
@@ -183,6 +203,20 @@ ul{
 .more-statistic button:hover a{
 	color: black;
 }
+@media screen and (max-width: 480px) {
+	.more-statistic {
+		padding: 40px 10% 30px 10%;
+	}
+	.more-statistic p{
+		font-size: 1.25em;
+	}
+	.more-statistic button{
+	border: 2px solid white;
+	margin-top: 0;
+	padding: 10px 5% 10px 5%;
+	font-size: 1em;
+}
+}
 /*STATISTIC*/
 /*MERIT*/
 .merit{
@@ -191,23 +225,22 @@ ul{
 	color: white;
 }
 .merit p{
-	font-size: 40px;
+	font-size: 3em;
 	font-weight: bold;
 }
 .merit ul{
 	list-style-type: none;
 	padding: 5% 10% 0% 10%;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+	grid-template-columns: repeat(auto-fill, minmax(30em,1fr));
 	grid-gap: 20px;
-	word-wrap: break-word;
-}
-.merit ul li{
-	height: 140px;
 }
 .img-merit{
 	background-color: white;
 	border-radius: 50%;
+}
+.img-merit ul li{
+	height: 140px;
 }
 .img-merit img{
 	margin-top: 15%;
@@ -216,16 +249,29 @@ ul{
 }
 .merit ul li a{
 	display: inline-grid;
-	font-size: 20px;
+	font-size: 1em;
 	text-decoration: none;
 	color: white;
 	text-align: left;
 }
+@media screen and (max-width: 480px) {
+	.merit p{
+		font-size: 1em;
+	}
+	.merit ul{
+		grid-template-columns: repeat(auto-fill, minmax(6em,1fr));
+	}
+	.merit ul li a{
+		padding: 10px 0px 0px 0px;
+	}
+}
+/*MERIT*/
+
 .trial{
 	padding: 3%;
 }
 .trial p{
-	font-size: 40px;
+	font-size: 3em;
 }
 .trial button{
 	background-color: red;
@@ -239,6 +285,11 @@ ul{
 }
 .trial button:hover{
 	background-color: #BF0D0D;
+}
+@media screen and (max-width: 480px) {
+	.trial p{
+		font-size: 1.5em;
+	}
 }
 /*MERIT*/
 

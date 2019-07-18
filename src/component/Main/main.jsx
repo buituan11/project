@@ -45,17 +45,19 @@ class Main extends Component {
                         null
                     }
                 </div>
-            	<div className="comment">
+            	<div className="comment container-fluid">
             		<div className="comment-slide container-fluid">
                         <Comment/>
                     </div>
 					<div className="more-comment container-fluid">
-						<p>Hãy cũng xem những câu chuyện từ khách hàng khác</p>
-						<button><NavLink to={`${this.props.gioiThieu.routes[1].path}/${this.props.gioiThieu.routes[1].subroute[0].id}`}>Xem ngay tại đây   <i className="fas fa-plus"/></NavLink></button>
+                        <div className="row">
+                            <p>Hãy cũng xem những câu chuyện từ khách hàng khác</p>
+                            <button><NavLink to={`${this.props.gioiThieu.routes[1].path}/${this.props.gioiThieu.routes[1].subroute[0].id}`}>Xem ngay tại đây   <i className="fas fa-plus"/></NavLink></button>
+                        </div>						
 					</div>
             	</div>
-				<div className="statistic">
-                    <p className="statistic-title">ECOUNT mang đến phương pháp quản lý<br/>cho doanh nghiệp vừa và nhỏ bằng sự tin cậy và tín nhiệm</p>
+				<div className="statistic container-fluid">
+                    <p>ECOUNT mang đến phương pháp quản lý<br/>cho doanh nghiệp vừa và nhỏ bằng sự tin cậy và tín nhiệm</p>
                     <ul>
                         <li>
                             <img src="https://res.cloudinary.com/buituan/image/upload/v1563301178/Project1/chi-nhanh.png" alt=""/>
@@ -162,7 +164,7 @@ class Main extends Component {
                         </li>
                     </ul>
                 </div>
-                <div className="trial">
+                <div className="trial container-fluid">
                     <p>Chỉ 1.000.000 đồng mỗi tháng với đầy đủ tính năng <br/>
                     Miễn phí 7 ngày dùng thử ngay hôm nay</p>
                     <button><NavLink to={`${this.props.sanPham.routes[0].path}/${this.props.ecount.routes[0].subroute[0].id}`}>

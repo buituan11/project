@@ -39,7 +39,6 @@ class Comment extends Component {
             <div className="comment-1 col-md-10 container-fluid">
                 <div className="row">
                     <div className="img-comment col-md-5">
-                        <img src={this.state.comment[this.state.commentId].img} alt=""/>
                     </div>
                     <div className="detail-comment col-md-7">
                         <p>{this.state.comment[this.state.commentId].detail}</p>
