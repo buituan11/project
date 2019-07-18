@@ -1,0 +1,4 @@
+1. <Route path={...} component={ (match)=<Component match={match}/> } : 	Truyen thuoc tinh vao component
+2. Responsive xoa khoang trang ben phai bang cach them thuoc tinh overflow: hidden vao class App css bao ben ngoai 
+3. @media screen and () {...} phai co khoang cach giua chu "and"
+4. Scrol to top bang cach them window.scrollTo(0, 0) vào componentDidMount

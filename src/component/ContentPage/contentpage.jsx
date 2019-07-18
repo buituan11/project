@@ -13,7 +13,7 @@ class Content extends Component {
     showSideBar = ( sidebar ) => {
     	return sidebar.routes.map((item, index) =>
     		<li key={ index }> 
-				<NavLink id={"route-"+index.toString()} to={`${item.path}/${item.subroute[0].id}`} className="route">   {/*activeClassName="active-side-bar"*/}
+				<NavLink to={`${item.path}/${item.subroute[0].id}`} className="route">   {/*activeClassName="active-side-bar"*/}
 					{ item.title } <i className="fas fa-chevron-down"/>
 				</NavLink> 
 				{item.subroute.map((e,index)=>
@@ -29,24 +29,15 @@ class Content extends Component {
     		<Item title={title} item={item}/>
     	);
     }
-    check = (item) => {
-    	return this.props.match.path.indexOf(item.path) > -1;
-    }
     componentDidMount() {
     	window.scroll(0, 0);
-    	console.log(this.props.match.path);
-    	this.props.sidebar.routes.map((item, index) =>{
-    		let bar = document.getElementById("route-"+index.toString());
-    		console.log(bar.classList);
-    		
-    	})
     }
     render() {
         return (
         <Router >
 			<div className="content-page container-fluid">
 			<div className="row">
-				<div className="side-bar col-md-3">
+				<div className="side-bar col-md-3 hidden-side-bar">
 					<h1>{this.props.sidebar.title}</h1>
 						<ul>
 							{ this.showSideBar( this.props.sidebar )}

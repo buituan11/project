@@ -30,22 +30,37 @@ class Comment extends Component {
     	}
     	return value;
     }
+    showBtnMobile = () => {
+        console.log(this.state.commentId);
+        let list = this.state.comment.map((item, index) => {
+            let style = index === this.state.commentId? {backgroundColor: 'black', borderRadius: '50%'}:null;
+            let e = <i key={index} style={style} onClick={()=> this.setState({commentId: index})}className="far fa-circle"></i>;
+            return e;
+        })
+        return list;
+    }
     render() {
         return (
         <div className="row">
-        	<button className="prev col-md-1" onClick={() => this.setState({commentId: this.setId(this.state.commentId-1)})}>
+        	<button className="prev col-md-1 hidden-btn" onClick={() => this.setState({commentId: this.setId(this.state.commentId-1)})}>
                 <i className="fas fa-chevron-left 7x" />
             </button>
-            <div className="comment-1 col-md-10 container-fluid">
+            <div className="col-md-10 container-fluid">
                 <div className="row">
                     <div className="img-comment col-md-5">
+                        <img src={this.state.comment[this.state.commentId].img} alt=""/>
                     </div>
                     <div className="detail-comment col-md-7">
                         <p>{this.state.comment[this.state.commentId].detail}</p>
                     </div>
+                    <div className="container-fluid">
+                        <div className="show-btn">
+                            { this.showBtnMobile() }
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button className="next col-md-1" onClick={() => this.setState({commentId: this.setId(this.state.commentId+1)})}>
+            <button className="next col-md-1 hidden-btn" onClick={() => this.setState({commentId: this.setId(this.state.commentId+1)})}>
                 <i className="fas fa-chevron-right 7x" />
             </button>
         </div>

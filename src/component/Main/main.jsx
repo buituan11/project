@@ -38,12 +38,10 @@ class Main extends Component {
                         <li><a href="#"><img src="https://res.cloudinary.com/buituan/image/upload/v1563301132/Project1/icon-bang-luong.png" alt=""/><br/>BẢNG LƯƠNG</a></li>
                         <li><a href="#"><img src="https://res.cloudinary.com/buituan/image/upload/v1563301151/Project1/icon-quan-ly-nhom.png" alt=""/><br/>QUẢN LÝ NHÓM</a></li>
                     </ul>
-                    { this.state.width <= 480? 
-                        <div className="hiden container-fluid">
-                            <button>Xem thêm</button>
-                        </div>:
-                        null
+                    <div className="more-visual container-fluid">       {/*show when responsive mobile*/}
+                        <button>Xem thêm</button>
                     }
+                    </div>
                 </div>
             	<div className="comment container-fluid">
             		<div className="comment-slide container-fluid">
