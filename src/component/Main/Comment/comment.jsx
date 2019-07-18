@@ -31,7 +31,7 @@ class Comment extends Component {
     	return value;
     }
     showBtnMobile = () => {
-        console.log(this.state.commentId);
+        // console.log(this.state.commentId);
         let list = this.state.comment.map((item, index) => {
             let style = index === this.state.commentId? {backgroundColor: 'black', borderRadius: '50%'}:null;
             let e = <i key={index} style={style} onClick={()=> this.setState({commentId: index})}className="far fa-circle"></i>;

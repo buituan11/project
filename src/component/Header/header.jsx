@@ -27,7 +27,8 @@ class Header extends Component {
     }
     render() {
         return (
-           <header className="container-fluid">
+          <div>
+           <div className="head-1 container-fluid">
            		<div className="row">
            			<div className="icon col-md-3">
            				<NavLink to="/"> <img src="https://res.cloudinary.com/buituan/image/upload/v1562254248/Project1/icon.png" alt="icon"/></NavLink>
@@ -66,8 +67,26 @@ class Header extends Component {
            				</nav>
            			</div>
            		</div>
-            </header>
-        );
+           </div>
+           <div className="head-2 container-fluid">
+              <div className="contact-mobile row">
+                <a href="#" style={{color: 'red', fontWeight: 'bold'}} className="col-2">000-0000-0000</a>
+                <a href="#" className="col-4">Yêu cầu gặp trực tiếp</a>
+                <a href="#" className="col-2">Bản Demo</a>
+                <a href="#" className="col-3">Dùng thử ngay</a>
+                <a href="#" className="col-1"><i className="fas fa-user-circle"></i></a>
+              </div>
+              <div className="row">
+                <div className="col-4">
+                  <NavLink to="/"> <img src="https://res.cloudinary.com/buituan/image/upload/v1562254248/Project1/icon.png" alt=""/> </NavLink>
+                </div>
+                <div className="menu-mobile col-8 container-fluid">
+                  <i class="fas fa-bars"></i>
+                </div>
+              </div>
+           </div>
+          </div>
+        );  
     }
 }
 

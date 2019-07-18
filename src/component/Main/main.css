@@ -1,5 +1,5 @@
 .main{
-	padding: 0px;
+	padding: 40px 0px 0px 0px;
 	width: 100%;
 }
 /*VISUAL*/
@@ -319,9 +319,5 @@ ul{
 /*MERIT*/
 
 /*RESPONSIVE*/
-@media screen and (max-width: 480px) {
-	header{
-		display: none;
-	}
-}
+
 /*RESPONSIVE*/
