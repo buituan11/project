@@ -6,10 +6,13 @@ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 class Main extends Component {
     constructor(props) {
         super(props);
-        // console.log('aaaaaaaa')
+        this.state = {
+            width: null
+        }
     }
     componentDidMount() {
         window.scroll(0, 0);
+        this.setState({width: window.innerWidth});
     }
     render() {
         let option=0;
@@ -35,6 +38,12 @@ class Main extends Component {
                         <li><a href="#"><img src="https://res.cloudinary.com/buituan/image/upload/v1563301132/Project1/icon-bang-luong.png" alt=""/><br/>BẢNG LƯƠNG</a></li>
                         <li><a href="#"><img src="https://res.cloudinary.com/buituan/image/upload/v1563301151/Project1/icon-quan-ly-nhom.png" alt=""/><br/>QUẢN LÝ NHÓM</a></li>
                     </ul>
+                    { this.state.width <= 480? 
+                        <div className="hiden container-fluid">
+                            <button>Xem thêm</button>
+                        </div>:
+                        null
+                    }
                 </div>
             	<div className="comment">
             		<div className="comment-slide container-fluid">

@@ -13,7 +13,7 @@ class Header extends Component {
               <div className="row">
                 <div className="menu2-title col-md-3">
                   <h1> { title } </h1>
-                  <button style={{bottom: '55px'}}> { button1 } <i className="fas fa-globe" /></button>
+                  <button style={{bottom: '55px'}} className="align-self-end"> { button1 } <i className="fas fa-globe" /></button>
                   <button style={{bottom: '10px'}}> LIÊN HỆ <i className="far fa-comment-alt" /> </button>
                 </div>
                 <div className="menu2-detail col-md-9">                
@@ -30,7 +30,7 @@ class Header extends Component {
            <header className="container-fluid">
            		<div className="row">
            			<div className="icon col-md-3">
-           				<NavLink to={process.env.PUBLIC_UR+"/"}> <img src="https://res.cloudinary.com/buituan/image/upload/v1562254248/Project1/icon.png" alt="icon"/></NavLink>
+           				<NavLink to="/"> <img src="https://res.cloudinary.com/buituan/image/upload/v1562254248/Project1/icon.png" alt="icon"/></NavLink>
            			</div>
            			<div className="navBar col-md-9">
            				<div className="contact container-fluid">

@@ -6,7 +6,9 @@ class Item extends Component {
     constructor(props) {
         super(props);
     }
-
+    componentDidMount() {
+    	window.scrollTo(0, 0);
+    }
     render() {
         return (
         	<div className="content col-md-9">
