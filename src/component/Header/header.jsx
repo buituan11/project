@@ -25,6 +25,18 @@ class Header extends Component {
             </div>
         );
     }
+    showNavBar = () =>{
+      let t = document.getElementById('vertical-nav');
+      if (t.style.display === "" || t.style.display === "none"){
+        t.style.display = 'block';
+      }
+    }
+    closeNavBar = () =>{
+      let t = document.getElementById('vertical-nav');
+      if (t.style.display === "" || t.style.display === "block"){
+        t.style.display = 'none';
+      }
+    }
     render() {
         return (
           <div>
@@ -81,7 +93,30 @@ class Header extends Component {
                   <NavLink to="/"> <img src="https://res.cloudinary.com/buituan/image/upload/v1562254248/Project1/icon.png" alt=""/> </NavLink>
                 </div>
                 <div className="menu-mobile col-8 container-fluid">
-                  <i class="fas fa-bars"></i>
+                  <i onClick={()=> this.showNavBar() }className="fas fa-bars"></i>
+                  <div id="vertical-nav" className="vertical-menu scale-in-right">
+                    <button onClick={()=> this.closeNavBar()}> X </button>
+                    <div className="nav">
+                      <NavLink to={ `${this.props.tinhNang.routes[0].path}/${this.props.tinhNang.routes[0].subroute[0].id}` }> {this.props.tinhNang.title}</NavLink>
+                      &nbsp;&nbsp; <i className="fas fa-chevron-down"></i>
+                    </div>     
+                    <div className="nav">
+                      <NavLink to={ `${this.props.ecount.routes[0].path}/${this.props.ecount.routes[0].subroute[0].id}` }> {this.props.ecount.title} </NavLink> 
+                      &nbsp;&nbsp; <i className="fas fa-chevron-down"></i>
+                    </div>     
+                    <div className="nav">
+                      <NavLink to={ `${this.props.dichVu.routes[0].path}/${this.props.dichVu.routes[0].subroute[0].id}` }> {this.props.dichVu.title} </NavLink> 
+                      &nbsp;&nbsp; <i className="fas fa-chevron-down"></i>
+                    </div>     
+                    <div className="nav">
+                      <NavLink to={ `${this.props.sanPham.routes[0].path}/${this.props.sanPham.routes[0].subroute[0].id}` }> {this.props.sanPham.title} </NavLink> 
+                      &nbsp;&nbsp; <i className="fas fa-chevron-down"></i>
+                    </div>     
+                    <div className="nav">
+                      <NavLink to={ `${this.props.gioiThieu.routes[0].path}/${this.props.gioiThieu.routes[0].subroute[0].id}` }> {this.props.gioiThieu.title} </NavLink> 
+                      &nbsp;&nbsp; <i className="fas fa-chevron-down"></i>
+                    </div>                    
+                  </div>
                 </div>
               </div>
            </div>

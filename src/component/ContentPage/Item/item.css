@@ -36,3 +36,11 @@
 .content-list ul li a:hover{
 	color: black;
 }
+@media screen and (max-width: 480px) {
+	.content h1{
+		font-size: 1.5em;
+	}
+	.content h2{
+		font-size: 1.25em;
+	}
+}
