@@ -37,6 +37,14 @@ class Header extends Component {
         t.style.display = 'none';
       }
     }
+    showSubMenu =(index) =>{
+      let t = document.getElementById("submenu-"+index.toString());
+      if (t.style.display === "none"){
+        t.style.display = "block";
+      }else {
+        t.style.display = "none";
+      }
+    }
     render() {
         return (
           <div>
@@ -56,26 +64,12 @@ class Header extends Component {
            					<a href="#"> <i className="fas fa-headphones-alt"/> 000-0000-0000 </a>
            				</div>
            				<nav className="menu container-fluid">		
-           					<div className="menu1">			{/* Tính năng ERP*/}
-           						<NavLink to={ `${this.props.tinhNang.routes[0].path}/${this.props.tinhNang.routes[0].subroute[0].id}` }> TÍNH NĂNG ERP </NavLink>	
-                      { this.showMenu2(this.props.tinhNang.title, "PHIÊN BẢN MÔ PHỎNG", this.props.tinhNang)}	
-           					</div>
-           					<div className="menu1">			{/*Về ECOUNT ERP*/}
-           						<NavLink to={ `${this.props.ecount.routes[0].path}/${this.props.ecount.routes[0].subroute[0].id}` }> VỀ ECOUNT ERP </NavLink> 
-                      { this.showMenu2(this.props.ecount.title, "TÍNH NĂNG", this.props.ecount)}	
-           					</div>
-           					<div className="menu1">		   {/*Dịch vụ*/}
-           						<NavLink to={ `${this.props.dichVu.routes[0].path}/${this.props.dichVu.routes[0].subroute[0].id}` }> DỊCH VỤ </NavLink> 
-                      { this.showMenu2(this.props.dichVu.title, "TÍNH NĂNG", this.props.dichVu)}
-           					</div>
-           					<div className="menu1">			{/*Sản phẩm*/}
-           						<NavLink to={ `${this.props.sanPham.routes[0].path}/${this.props.sanPham.routes[0].subroute[0].id}` }> SẢN PHẨM </NavLink> 
-                      { this.showMenu2(this.props.sanPham.title, "TÍNH NĂNG", this.props.sanPham)}
-           					</div>
-           					<div className="menu1">			{/*Giới thiệu*/}
-           						<NavLink to={ `${this.props.gioiThieu.routes[0].path}/${this.props.gioiThieu.routes[0].subroute[0].id}` }> GIỚI THIỆU </NavLink> 
-                      { this.showMenu2(this.props.gioiThieu.title, "TÍNH NĂNG", this.props.gioiThieu)}
-           					</div>
+                    {this.props.mainRoute.map((item, index) =>
+                        <div key={index} className="menu1">
+                          <NavLink to={ `${item.routes[0].path}/${item.routes[0].subroute[0].id}` }> {item.title} </NavLink>                           
+                          { this.showMenu2(item.title, "TÍNH NĂNG", item)} 
+                        </div>
+                    )}
            				</nav>
            			</div>
            		</div>
@@ -96,26 +90,21 @@ class Header extends Component {
                   <i onClick={()=> this.showNavBar() }className="fas fa-bars"></i>
                   <div id="vertical-nav" className="vertical-menu scale-in-right">
                     <button onClick={()=> this.closeNavBar()}> X </button>
-                    <div className="nav">
-                      <NavLink to={ `${this.props.tinhNang.routes[0].path}/${this.props.tinhNang.routes[0].subroute[0].id}` }> {this.props.tinhNang.title}</NavLink>
-                      &nbsp;&nbsp; <i className="fas fa-chevron-down"></i>
-                    </div>     
-                    <div className="nav">
-                      <NavLink to={ `${this.props.ecount.routes[0].path}/${this.props.ecount.routes[0].subroute[0].id}` }> {this.props.ecount.title} </NavLink> 
-                      &nbsp;&nbsp; <i className="fas fa-chevron-down"></i>
-                    </div>     
-                    <div className="nav">
-                      <NavLink to={ `${this.props.dichVu.routes[0].path}/${this.props.dichVu.routes[0].subroute[0].id}` }> {this.props.dichVu.title} </NavLink> 
-                      &nbsp;&nbsp; <i className="fas fa-chevron-down"></i>
-                    </div>     
-                    <div className="nav">
-                      <NavLink to={ `${this.props.sanPham.routes[0].path}/${this.props.sanPham.routes[0].subroute[0].id}` }> {this.props.sanPham.title} </NavLink> 
-                      &nbsp;&nbsp; <i className="fas fa-chevron-down"></i>
-                    </div>     
-                    <div className="nav">
-                      <NavLink to={ `${this.props.gioiThieu.routes[0].path}/${this.props.gioiThieu.routes[0].subroute[0].id}` }> {this.props.gioiThieu.title} </NavLink> 
-                      &nbsp;&nbsp; <i className="fas fa-chevron-down"></i>
-                    </div>                    
+                    {this.props.mainRoute.map((item, index)=>
+                      <div key={index}>
+                        <div className="nav">
+                          <NavLink to={ `${item.routes[0].path}/${item.routes[0].subroute[0].id}` }> {item.title}</NavLink>
+                          &nbsp;&nbsp; <i onClick={()=> this.showSubMenu(index)}className="fas fa-chevron-down"></i>
+                        </div>     
+                          <ul id={"submenu-"+index.toString()} style={{display: "none"}}>
+                            { item.routes.map((e, index)=>
+                                <li key={index}>
+                                  <NavLink to={`${e.path}/${e.subroute[0].id}`}> {e.title} </NavLink>
+                                </li>
+                            )}
+                          </ul>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

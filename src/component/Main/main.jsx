@@ -25,10 +25,10 @@ class Main extends Component {
                             <p>chỉ 1.000.000 đồng mỗi tháng</p>
                     </div>
                     <ul className="visual-detail container-fluid">
-                        <li><NavLink to={`${this.props.tinhNang.routes[0].path}/${this.props.tinhNang.routes[0].subroute[0].id}`}>
+                        <li><NavLink to={`${this.props.mainRoute[0].routes[0].path}/${this.props.mainRoute[0].routes[0].subroute[0].id}`}>
                             <img src="https://res.cloudinary.com/buituan/image/upload/v1562339003/Project1/ico-nen-tang-erp.png" alt=""/><br/>NỀN TẢNG WEB
                         </NavLink></li>
-                        <li><NavLink to={`${this.props.tinhNang.routes[1].path}/${this.props.tinhNang.routes[1].subroute[0].id}`}>
+                        <li><NavLink to={`${this.props.mainRoute[0].routes[1].path}/${this.props.mainRoute[0].routes[1].subroute[0].id}`}>
                             <img src="https://res.cloudinary.com/buituan/image/upload/v1563300939/Project1/icon-quan-ly-kho.png" alt=""/><br/>QUẢN LÝ KHO
                         </NavLink></li>
                         <li><a href="#"><img src="https://res.cloudinary.com/buituan/image/upload/v1563300966/Project1/icon-san-xuat.png" alt=""/><br/>SẢN XUẤT</a></li>
@@ -50,7 +50,7 @@ class Main extends Component {
 					<div className="more-comment container-fluid">
                         <div className="row">
                             <p>Hãy cũng xem những câu chuyện từ khách hàng khác</p>
-                            <button><NavLink to={`${this.props.gioiThieu.routes[1].path}/${this.props.gioiThieu.routes[1].subroute[0].id}`}>Xem ngay tại đây   <i className="fas fa-plus"/></NavLink></button>
+                            <button><NavLink to={`${this.props.mainRoute[4].routes[1].path}/${this.props.mainRoute[4].routes[1].subroute[0].id}`}>Xem ngay tại đây   <i className="fas fa-plus"/></NavLink></button>
                         </div>						
 					</div>
             	</div>
@@ -80,7 +80,7 @@ class Main extends Component {
                     </ul>
                     <div className="more-statistic">
                         <p>1.256 ngành hàng kinh doanh khác nhau<br/>đang tin dùng ECOUNT ERP</p>
-                        <button><NavLink to={`${this.props.ecount.routes[1].path}/${this.props.ecount.routes[1].subroute[0].id}`}>
+                        <button><NavLink to={`${this.props.mainRoute[1].routes[1].path}/${this.props.mainRoute[1].routes[1].subroute[0].id}`}>
                             Xem chi tiết <i className="fas fa-plus"/>
                         </NavLink></button>
                     </div>
@@ -165,7 +165,7 @@ class Main extends Component {
                 <div className="trial container-fluid">
                     <p>Chỉ 1.000.000 đồng mỗi tháng với đầy đủ tính năng <br/>
                     Miễn phí 7 ngày dùng thử ngay hôm nay</p>
-                    <button><NavLink to={`${this.props.sanPham.routes[0].path}/${this.props.ecount.routes[0].subroute[0].id}`}>
+                    <button><NavLink to={`${this.props.mainRoute[3].routes[0].path}/${this.props.mainRoute[3].routes[0].subroute[0].id}`}>
                             Yêu cầu dùng thử <i className="fas fa-plus" />
                     </NavLink></button>
                 </div>
